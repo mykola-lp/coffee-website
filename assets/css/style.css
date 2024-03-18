@@ -1,3 +1,105 @@
-h1 {
-  color: brown;
+/*==============================================================
+  # Importing.
+==============================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*==============================================================
+  # Variables.
+==============================================================*/
+:root {
+  /* colors */
+  --white: #FFFFFF;
+  --black: #000000;
+  --bunker: #222831;
+  --dark-cyan: #29A19C;
+
+  /* font weights */
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/*==============================================================
+  # Common Styles.
+==============================================================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  font-weight: var(--fw-700);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==============================================================
+  # Header.
+==============================================================*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--bunker);
+}
+
+#header .navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .menu-links {
+  display: flex;
+  gap: 40px;
+}
+
+.menu-links ul > li {
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 61px;
+}
+
+.menu-links a {
+  position: relative;
+}
+
+.menu-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 80%;
+  height: 2px;
+  background-color: var(--dark-cyan);
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-links a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navbar .site-logo > img {
+  width: 120px;
+  vertical-align: middle;
+  margin-left: 50px;
 }
