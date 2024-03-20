@@ -51,41 +51,31 @@ img {
   # Header.
 ==============================================================*/
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   padding: 20px;
   background-color: var(--bunker);
 }
 
-#header .navbar {
+.navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: space-between;
 }
 
-.navbar .menu-links {
+.navbar .menu {
   display: flex;
   gap: 40px;
 }
 
-.menu-links ul > li {
-  font-size: 25px;
-  letter-spacing: 1px;
-  line-height: 61px;
-}
-
-.menu-links a {
+.menu li > a {
   position: relative;
 }
 
-.menu-links a::after {
+.menu li > a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 50%;
   width: 80%;
   height: 2px;
@@ -94,12 +84,12 @@ img {
   transition: transform 0.3s ease;
 }
 
-.menu-links a:hover::after {
+.menu li > a:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
 .navbar .site-logo > img {
-  width: 120px;
-  vertical-align: middle;
-  margin-left: 50px;
+  float: right;
+  margin-left: 20px;
+  max-width: 30%;
 }
