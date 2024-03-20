@@ -3,6 +3,27 @@
 ==============================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* Fonts. */
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Grand Hotel Regular";
+  src: url("../fonts/GrandHotel-Regular.woff") format("woff");
+}
+
 /*==============================================================
   # Variables.
 ==============================================================*/
@@ -12,6 +33,12 @@
   --black: #000000;
   --bunker: #222831;
   --dark-cyan: #29A19C;
+
+  /* fonts */
+  --font-montserrat-reg: "Montserrat Regular";
+  --font-montserrat-bold: "Montserrat Bold";
+  --font-montserrat-light: "Montserrat Light";
+  --font-grand-hotel-reg: "Grand Hotel Regular";
 
   /* font weights */
   --fw-400: 400;
@@ -28,7 +55,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat-reg), 'Montserrat', sans-serif;
   color: var(--white);
   font-weight: var(--fw-700);
 }
@@ -92,4 +119,71 @@ img {
   float: right;
   margin-left: 20px;
   max-width: 30%;
+}
+
+/*==============================================================
+  # Hero.
+==============================================================*/
+#hero-section {
+  padding: 20px 20px 250px;
+  background-color: var(--bunker);
+}
+
+#hero-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#hero-section .content h1 {
+  font-size: 11rem;
+  letter-spacing: 6px;
+  line-height: 300px;
+  font-weight: var(--fw-400);
+  font-family: var(--font-grand-hotel-reg);
+}
+
+#hero-section .content span {
+  font-size: 3.3rem;
+  letter-spacing: 2px;
+  line-height: 8px;
+  text-transform: uppercase;
+}
+
+#hero-section .content p {
+  padding: 30px 0 30px;
+  max-width: 40%;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: var(--fw-400);
+}
+
+#hero-section .content button {
+  background-color: var(--dark-cyan);
+  outline: none;
+  border: none;
+  color: inherit;
+  line-height: 28px;
+  font-size: 2rem;
+  font-weight: var(--fw-700);
+  border-radius: 15px;
+  padding: 12px 30px;
+}
+
+#hero-section .content .corner-image {
+  position: absolute;
+  bottom: -250px;
+  right: 0;
+  z-index: 1;
+  width: 65%;
+  transform: scaleX(-1);
+  clip-path: polygon(42% 6%, 18% 5%, 0% 24%, 0% 0%, 0% 100%, 95% 100%, 100% 68%, 88% 42%, 63% 33%);
+}
+
+#hero-section .content .shape-image {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  bottom: -250px;
 }
